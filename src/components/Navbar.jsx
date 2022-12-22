@@ -2,6 +2,7 @@ import { useContext } from "react";
 import MoonIcon from "../assets/MoonIcon";
 import SunIcon from "../assets/SunIcon";
 import ModeContext from "../context/ModeContext";
+import { motion } from "framer-motion"
 
 const Navbar = () => {
   const { mode, setMode } = useContext(ModeContext);
