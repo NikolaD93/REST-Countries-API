@@ -15,9 +15,8 @@ const Filter = ({ onSelect }) => {
         onChange={selectType}
         className={`${
           mode ? "bg-white" : "bg-dark-darkBlue"
-        } w-[250px] px-[30px] py-[15px] outline-0 rounded-md shadow-lg border-0 cursor-pointer`}
+        } w-[250px] px-[30px] py-[15px] outline-0 rounded-md shadow-lg border-0 cursor-pointer hover:opacity-50`}
         name="filter"
-        id=""
       >
         <option>Filter by Region</option>
         <option value="Africa">Africa</option>

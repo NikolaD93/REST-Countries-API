@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import SearcIconWhite from "../assets/SearchIconWhite";
 import SearchIcon from "../assets/SearchIcon";
 import ModeContext from "../context/ModeContext";
@@ -7,7 +7,6 @@ import Countries from "./Countries";
 import Search from "../constants/Search";
 import Filter from "../constants/Filter";
 import { API_URL } from "../util/api";
-import Arrow from "../assets/Arrow";
 
 const Main = () => {
   const { mode } = useContext(ModeContext);

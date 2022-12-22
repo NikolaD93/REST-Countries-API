@@ -4,6 +4,7 @@ import Arrow from "../assets/Arrow";
 import ArrowWhite from "../assets/ArrowWhite";
 import ModeContext from "../context/ModeContext";
 import { API_URL } from "../util/api";
+import { motion } from "framer-motion";
 
 const CountryInfo = () => {
   const params = useParams();
@@ -45,23 +46,47 @@ const CountryInfo = () => {
           return (
             <>
               <div className="img lg:w-[600px] lg:h-[500px] space-y-20">
-                <Link
-                  to="/"
-                  className={`${
-                    mode ? "bg-white" : "bg-dark-darkBlue"
-                  } py-2 px-10 rounded-md shadow-lg border-0 cursor-pointer`}
+                <motion.button
+                  whileHover={{ scale: 1.2 }}
+                  onHoverStart={(e) => {}}
+                  onHoverEnd={(e) => {}}
                 >
-                  {mode ? <Arrow /> : <ArrowWhite />}
-                  Back
-                </Link>
-                <img
+                  <Link
+                    to="/"
+                    className={`${
+                      mode ? "bg-white" : "bg-dark-darkBlue"
+                    } py-2 px-10 rounded-md shadow-lg border-0 cursor-pointer`}
+                  >
+                    {mode ? <Arrow /> : <ArrowWhite />}
+                    Back
+                  </Link>
+                </motion.button>
+                <motion.img
+                  initial={{
+                    opacity: 0,
+                    translateX: -500,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    translateX: 0,
+                  }}
+                  transition={{
+                    duration: 0.5,
+                    translateX: -500,
+                  }}
+                  exit={{
+                    opacity: 0,
+                    translateX: -500,
+                  }}
                   className="w-[100%] h-[300px] object-cover block"
                   src={item.flag}
                   alt=""
                 />
               </div>
               <div className="info mt-[50px] lg:mt-[100px] h-[400px] lg:w-[500px] flex flex-col justify-evenly">
-                <h1 className="text-2xl mt-10 lg:mt-0 lg:text-3xl font-[800]">{item.name}</h1>
+                <h1 className="text-2xl mt-10 lg:mt-0 lg:text-3xl font-[800]">
+                  {item.name}
+                </h1>
                 <div className="country-info flex flex-col lg:flex-row lg:justify-between">
                   <div className="left space-y-2 my-8">
                     <p>

@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import CountriesContext from "../context/CountriesContext";
 import ModeContext from "../context/ModeContext";
+import { motion } from "framer-motion";
 
 const Countries = () => {
   const { countries } = useContext(CountriesContext);
@@ -17,38 +18,58 @@ const Countries = () => {
       ) : (
         countries.map((country, idx) => {
           return (
-            <Link to={`/country/${country.name}`}
+            <Link
+              to={`/country/${country.name}`}
               className="w-[300px] rounded-lg shadow-lg cursor-pointer mb-[80px]"
               key={idx}
             >
-              <div className="image h-[200px] w-[100%]">
-                <img
-                  className="h-[100%] w-[100%] object-cover block rounded-t-lg"
-                  src={country.flag}
-                  alt="flag"
-                />
-              </div>
-              <div
-                className={`${
-                  mode ? "bg-white" : "bg-dark-darkBlue"
-                } text min-h-[230px] pl-5 rounded-b-lg`}
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  translateX: -500,
+                }}
+                animate={{
+                  opacity: 1,
+                  translateX: 0,
+                }}
+                transition={{
+                  delay: 0.5,
+                  x: { duration: 1 },
+                  default: { ease: "linear" },
+                }}
+                whileHover={{
+                  translateY: -10,
+                }}
               >
-                <h2 className="font-[600] text-xl py-6">{country.name}</h2>
-                <div className="space-y-2">
-                  <p>
-                    <span className="font-[600]">Population: </span>{" "}
-                    {country.population.toLocaleString()}
-                  </p>
-                  <p>
-                    <span className="font-[600]">Region: </span>
-                    {country.region}
-                  </p>
-                  <p>
-                    <span className="font-[600]">Capital: </span>{" "}
-                    {country.capital}
-                  </p>
+                <div className="image h-[200px] w-[100%]">
+                  <img
+                    className="h-[100%] w-[100%] object-cover block rounded-t-lg"
+                    src={country.flag}
+                    alt="flag"
+                  />
                 </div>
-              </div>
+                <div
+                  className={`${
+                    mode ? "bg-white" : "bg-dark-darkBlue"
+                  } text min-h-[230px] pl-5 rounded-b-lg`}
+                >
+                  <h2 className="font-[600] text-xl py-6">{country.name}</h2>
+                  <div className="space-y-2">
+                    <p>
+                      <span className="font-[600]">Population: </span>{" "}
+                      {country.population.toLocaleString()}
+                    </p>
+                    <p>
+                      <span className="font-[600]">Region: </span>
+                      {country.region}
+                    </p>
+                    <p>
+                      <span className="font-[600]">Capital: </span>{" "}
+                      {country.capital}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
             </Link>
           );
         })
