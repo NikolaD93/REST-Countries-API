@@ -2,15 +2,23 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import CountriesContext from "../context/CountriesContext";
 import ModeContext from "../context/ModeContext";
-import { motion } from "framer-motion";
+import { motion, useScroll, useSpring } from "framer-motion";
 
 const Countries = () => {
   const { countries } = useContext(CountriesContext);
   const { isLoading } = useContext(CountriesContext);
   const { mode } = useContext(ModeContext);
 
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+
   return (
     <>
+      <motion.div className={`${mode ? "progress-bar-dark" : "progress-bar"}`} style={{ scaleX }} />
       {isLoading ? (
         <div className="w-[100px] h-[100vh] mt-[200px] font-[800]">
           <h2 className="text-3xl tracking-widest">Loading...</h2>
