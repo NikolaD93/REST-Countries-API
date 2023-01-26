@@ -2,6 +2,7 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 ### The challenge
 
 # live: https://restcountriesapinikola93.netlify.app/
+# video : https://www.youtube.com/watch?v=G1pbW_WUWJg&ab_channel=Dojcinovic
 
 Users should be able to:
 
