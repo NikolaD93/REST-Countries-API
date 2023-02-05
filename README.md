@@ -3,9 +3,7 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 
 # [Live Website Preview](https://restcountriesapinikola93.netlify.app/).
 
-<a href="https://www.youtube.com/channel/UCcHSX6C51HNqchQMjaHs3_A">
-    <img width="52" height="52" src="https://raw.githubusercontent.com/shahbajjamil/Social-Meadia-Icons/master/Icons-logos/youtube-circle.png" alt="YouTube Badge"/>
-</a> # [Video Preview](https://www.youtube.com/watch?v=G1pbW_WUWJg&ab_channel=Dojcinovic).
+# [Video Preview](https://www.youtube.com/watch?v=G1pbW_WUWJg&t=24s).
 
 
 Users should be able to:
