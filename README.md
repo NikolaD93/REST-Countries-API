@@ -3,7 +3,7 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 
 # [Live Website Preview](https://restcountriesapinikola93.netlify.app/).
 
-# [Video Preview](https://www.youtube.com/watch?v=G1pbW_WUWJg&t=24s).
+# [YT Video Preview](https://www.youtube.com/watch?v=G1pbW_WUWJg&t=24s).
 
 
 Users should be able to:
