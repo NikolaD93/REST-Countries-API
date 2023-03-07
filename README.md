@@ -1,9 +1,9 @@
 This is a solution to the [REST Countries API with color theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca).
 
 
-# [Live Website Preview](https://restcountriesapinikola93.netlify.app/).
+# [Live Website Preview](https://restcountriesapinikola93.netlify.app/)
 
-# [YT Video Preview](https://www.youtube.com/watch?v=G1pbW_WUWJg&t=24s).
+# [YT Video Preview](https://www.youtube.com/watch?v=G1pbW_WUWJg&t=24s)
 
 
 Users should be able to:
