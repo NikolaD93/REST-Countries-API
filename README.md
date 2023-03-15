@@ -1,5 +1,9 @@
 This is a solution to the [REST Countries API with color theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca).
 
+## Technologies used:
+
+- `React.js` & `Tailwind` for frontend.
+- `Vite.js` as module bundler.
 
 # [Live Website Preview](https://restcountriesapinikola93.netlify.app/)
 
